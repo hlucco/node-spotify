@@ -26,7 +26,7 @@ let clientData = {
   clientSecret: keys.client_secret,
 };
 
-let service = new SpotifyService(clientData);
+let service = new ws.SpotifyService(clientData);
 await service.init();
 ```
 
@@ -40,7 +40,7 @@ let query = {
   offset: 0,
 };
 
-let data = await search(query, service);
+let data = await ws.search(query, service);
 ```
 
 data will contain the results of your query.
