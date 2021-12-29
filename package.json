@@ -2,7 +2,7 @@
   "name": "wrapped-spotify",
   "version": "1.0.8",
   "description": "",
-  "main": "./dist/src/index.js",
+  "main": "index.js",
   "scripts": {
     "prestart": "tsc",
     "start": "node ./dist/src/sandbox.js"
