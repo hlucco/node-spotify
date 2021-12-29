@@ -28,8 +28,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         limit: 10,
         offset: 0,
     };
-    // let data = await search(query, service);
-    // console.log(data.tracks.items);
+    let data = yield (0, endpoints_1.search)(query, service);
+    console.log(data.tracks.items);
     let userdata = yield (0, endpoints_1.getUserProfile)(service);
     console.log(userdata);
 });

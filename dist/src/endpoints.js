@@ -36,7 +36,7 @@ function getUserProfile(service) {
     return __awaiter(this, void 0, void 0, function* () {
         let config = {
             headers: {
-                Authorization: `Bearer ${service.retrieveToken()}`,
+                Authorization: `Bearer ${service.retrieveUser().token}`,
             },
         };
         try {

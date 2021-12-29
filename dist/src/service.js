@@ -17,6 +17,8 @@ class SpotifyService {
     constructor(clientData) {
         this.clientId = clientData.clientId;
         this.clientSecret = clientData.clientSecret;
+        this.loggedIn = false;
+        this.loggedInUser = null;
     }
     storeToken(token) {
         this.accessToken = token;
@@ -24,6 +26,15 @@ class SpotifyService {
     }
     retrieveToken() {
         return this.accessToken;
+    }
+    isLoggedIn() {
+        return this.loggedIn;
+    }
+    retrieveUser() {
+        return this.loggedInUser;
+    }
+    storeUser(user) {
+        this.loggedInUser = user;
     }
     init() {
         return __awaiter(this, void 0, void 0, function* () {
