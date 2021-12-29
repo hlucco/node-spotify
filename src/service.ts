@@ -5,14 +5,23 @@ type ClientData = {
   clientSecret: string;
 };
 
+type User = {
+  username: string;
+  token: string;
+};
+
 export default class SpotifyService {
   private accessToken: string;
   private clientId: string;
   private clientSecret: string;
+  private loggedIn: boolean;
+  private loggedInUser: User;
 
   constructor(clientData: ClientData) {
     this.clientId = clientData.clientId;
     this.clientSecret = clientData.clientSecret;
+    this.loggedIn = false;
+    this.loggedInUser = null;
   }
 
   storeToken(token: string): string {
@@ -22,6 +31,18 @@ export default class SpotifyService {
 
   retrieveToken(): string {
     return this.accessToken;
+  }
+
+  isLoggedIn(): boolean {
+    return this.loggedIn;
+  }
+
+  retrieveUser(): User {
+    return this.loggedInUser;
+  }
+
+  storeUser(user: User) {
+    this.loggedInUser = user;
   }
 
   async init(): Promise<Object> {

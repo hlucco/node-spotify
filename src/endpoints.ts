@@ -28,3 +28,22 @@ export async function search(query: Query, service: SpotifyService) {
     return e.response.data;
   }
 }
+
+export async function getUserProfile(service: SpotifyService) {
+  let config = {
+    headers: {
+      Authorization: `Bearer ${service.retrieveUser().token}`,
+    },
+  };
+
+  try {
+    let spotifyResult = await axios.get(
+      `https://api.spotify.com/v1/me`,
+      config
+    );
+
+    return spotifyResult.data;
+  } catch (e) {
+    return e.response.data;
+  }
+}
