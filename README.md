@@ -19,6 +19,8 @@ To use this package you will both a client id and a client secret from Spotify. 
 To begin using any of the endpoint methods, create a service:
 
 ```ts
+import * as ws from "wrapped-spotify";
+
 let clientData = {
   clientId: keys.client_id,
   clientSecret: keys.client_secret,
