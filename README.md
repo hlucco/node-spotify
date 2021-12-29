@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/axios.svg?style=flat-square)](https://www.npmjs.org/package/wrapped-spotify)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Npm package total downloads](https://badgen.net/npm/dt/wrapped-spotify)](https://www.npmjs.org/package/wrapped-spotify)
 
 Node JS wrapper for Spotify Web APIs.
 
@@ -11,7 +12,7 @@ Node JS wrapper for Spotify Web APIs.
 
 ## API Keys
 
-To use this package you will both a client id and a client secret from Spotify. These keys can be obtained from [spotify](https://developer.spotify.com/documentation/web-api/quick-start/). These keys are required on initialization of a `SpotifyService`.
+To use this package you will both a client id and a client secret from Spotify. These keys can be obtained from [spotify](https://developer.spotify.com/documentation/web-api/quick-start/). Keys are required on initialization of a `SpotifyService`.
 
 ## Getting Started
 
