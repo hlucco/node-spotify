@@ -23,7 +23,7 @@ function search(query, service) {
             },
         };
         try {
-            let spotifyResult = yield axios_1.default.get(`https://api.spotify.com/v1/search${util_1.serializeQuery(query)}`, config);
+            let spotifyResult = yield axios_1.default.get(`https://api.spotify.com/v1/search${(0, util_1.serializeQuery)(query)}`, config);
             return spotifyResult.data;
         }
         catch (e) {
