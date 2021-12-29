@@ -14,13 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const keys_json_1 = __importDefault(require("../keys.json"));
 const endpoints_1 = require("./endpoints");
-const service_1 = __importDefault(require("./service"));
+const service_1 = require("./service");
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     let clientData = {
         clientId: keys_json_1.default.client_id,
         clientSecret: keys_json_1.default.client_secret,
     };
-    let service = new service_1.default(clientData);
+    let service = new service_1.SpotifyService(clientData);
     yield service.init();
     let query = {
         q: "Taylor Swift",

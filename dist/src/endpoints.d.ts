@@ -1,4 +1,4 @@
-import SpotifyService from "./service";
+import { SpotifyService } from "./service";
 export declare type Query = {
     q: string;
     type: string[];

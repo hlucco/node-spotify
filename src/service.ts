@@ -1,16 +1,16 @@
 import axios from "axios";
 
-type ClientData = {
+export type ClientData = {
   clientId: string;
   clientSecret: string;
 };
 
-type User = {
+export type User = {
   username: string;
   token: string;
 };
 
-export default class SpotifyService {
+export class SpotifyService {
   private accessToken: string;
   private clientId: string;
   private clientSecret: string;

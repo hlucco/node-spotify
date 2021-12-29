@@ -1,6 +1,6 @@
 import keys from "../keys.json";
 import { getUserProfile, search } from "./endpoints";
-import SpotifyService from "./service";
+import { SpotifyService } from "./service";
 
 const main = async () => {
   let clientData = {

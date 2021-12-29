@@ -1,5 +1,5 @@
 import axios from "axios";
-import SpotifyService from "./service";
+import { SpotifyService } from "./service";
 import { serializeQuery } from "./util";
 
 export type Query = {

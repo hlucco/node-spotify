@@ -1,12 +1,12 @@
-declare type ClientData = {
+export declare type ClientData = {
     clientId: string;
     clientSecret: string;
 };
-declare type User = {
+export declare type User = {
     username: string;
     token: string;
 };
-export default class SpotifyService {
+export declare class SpotifyService {
     private accessToken;
     private clientId;
     private clientSecret;
@@ -20,4 +20,3 @@ export default class SpotifyService {
     storeUser(user: User): void;
     init(): Promise<Object>;
 }
-export {};
