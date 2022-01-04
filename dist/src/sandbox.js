@@ -28,10 +28,17 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         limit: 10,
         offset: 0,
     };
-    let data = yield endpoints_1.search(query, service);
+    let data = yield (0, endpoints_1.search)(query, service);
     console.log(data.tracks.items);
-    let userdata = yield endpoints_1.getUserProfile(service);
+    service.storeUser({
+        username: "username here",
+        token: "token here",
+    });
+    let userdata = yield (0, endpoints_1.getUserProfile)(service);
     console.log(userdata);
+    let devices = yield (0, endpoints_1.getDevices)(service);
+    console.log(devices);
+    yield (0, endpoints_1.play)(service, devices.devices[0].id);
 });
 main();
 //# sourceMappingURL=sandbox.js.map

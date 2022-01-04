@@ -1,5 +1,5 @@
 import keys from "../keys.json";
-import { getUserProfile, search } from "./endpoints";
+import { getDevices, getUserProfile, play, search, pause } from "./endpoints";
 import { SpotifyService } from "./service";
 
 const main = async () => {
@@ -20,8 +20,18 @@ const main = async () => {
   let data = await search(query, service);
   console.log(data.tracks.items);
 
+  service.storeUser({
+    username: "username here",
+    token: "token here",
+  });
+
   let userdata = await getUserProfile(service);
   console.log(userdata);
+
+  let devices = await getDevices(service);
+  console.log(devices);
+
+  await play(service, devices.devices[0].id);
 };
 
 main();

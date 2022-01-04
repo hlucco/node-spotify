@@ -58,3 +58,19 @@ After cloning this repository:
 Get Spotify catalog information about albums, artists, playlists, tracks, shows or episodes that match a keyword string.
 
 - `search(query: Query, service: SpotifyService)`
+
+Get detailed profile information about the current user (including the current user's username).
+
+- `getUserProfile(service: SpotifyService)`
+
+Start a new context or resume current playback on the user's active device.
+
+- `play(service: SpotifyService, deviceId: string, trackInfo?: TrackInfo)`
+
+Pause playback on the user's account.
+
+- `pause(service: SpotifyService, deviceId: string)`
+
+Get information about a user’s available devices.
+
+- `getDevices(service: SpotifyService)`
